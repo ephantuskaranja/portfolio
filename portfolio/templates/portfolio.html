@@ -1,0 +1,73 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block content %}
+<div class="text-centre" id="port">
+  <h1>Portfolio</h1>
+  </div>
+  <hr>
+  
+<div class="row">
+    {% for prof in profile %}
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <!-- insertpicture -->
+    <img src="{{prof.image.url}}" class="img-responsive" alt="Image" id="image">
+  </div>
+  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+    
+    <h3>{{prof.first_name}} {{prof.last_name}}</h3>
+    <h4>{{prof.about}}</h4>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="row">
+  
+  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+    <!-- skills,educ,jobexp,contacts -->
+    <div class="w3-card">
+      <h4>Skills</h4>
+      {% for skill in skills %}
+      <li>{{skill.skill}}</li>
+      {% endfor %}
+      <hr>
+    </div>
+    <div class="w3-card">
+      <h4>Education</h4>
+      {% for edu in education %}
+      <li>{{edu.institution}}</li>
+      {% endfor %}
+      <hr>
+    </div>
+    <div class="w3-card">
+        <h4>Contacts</h4>
+        {% for contact in contacts %}
+        <li>{{contact.email}}</li>
+        {% endfor %}
+    </div>
+    <hr>
+  </div>
+  <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+    <!-- bio,projects -->
+    <div>
+      <h3>Projects</h4>
+      <h6>Below are some of the projects that I have done</h6>
+      <hr>
+      {% for  project in projects %}
+      <div class="w3-card" id="projects">
+          <h4>{{project.name}}</h4>
+          <p>{{project.description}}</p>
+          <a href="{{project.github_link}}"><button type="button">View-on_Github</button></a>
+          {% if project.live_link %}
+          <a href="{{project.live_link}}"><button type="button">Live-link</button></a>
+          {% endif %}
+          
+      </div>
+      <hr>
+      
+      {% endfor %}
+    </div>
+    </div>
+    
+</div>
+{% endblock %}
