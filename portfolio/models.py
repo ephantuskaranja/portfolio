@@ -21,6 +21,7 @@ class Projects(models.Model):
     username = models.ForeignKey(Profile)
     name = models.CharField(max_length=30)
     description = models.TextField()
+    image = models.ImageField(upload_to='images/')
     github_link = models.CharField(max_length=100, blank=True, null=True)
     live_link = models.CharField(max_length=100, blank=True, null=True)
 

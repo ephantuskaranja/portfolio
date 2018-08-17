@@ -5,13 +5,45 @@
     max-width: 100%;
     height: auto;
 }
-#projects{
+
+#about{
+    padding-top: 30px;
     
 }
+
+#skills{
+    
+}
+
+
+#projects{
+   
+    
+}
+
 #port{
     text-align: center;
-    color: #4286f4;
+    /* color: #4286f4; */
+    color: white;
+    height: 15vh;
+    background-color: #605657;
+    /* background-image: url('images/portbg.jpeg'); */
+    
 }
 #navbarNav{
     color: #4286f4;
+}
+/* h4{
+    color: #4286f4;
+}
+h3{
+    color: #091426;
+} */
+button{
+    color: green;
+    border-radius: 12px;
+}
+
+#footer{
+    
 }
