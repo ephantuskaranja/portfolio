@@ -1,24 +1,13 @@
-#image{
-    border-radius: 8px;
-    padding: 5px;
-    width: 200px;
-    max-width: 100%;
-    height: auto;
-}
 
 #about{
     padding-top: 30px;
     
 }
 
-#skills{
-    
-}
 
-
-#projects{
+.projects{
    
-    
+    text-align: center;
 }
 
 #port{
@@ -26,24 +15,57 @@
     /* color: #4286f4; */
     color: white;
     height: 15vh;
-    background-color: #605657;
+    background-color: #71383d;
     /* background-image: url('images/portbg.jpeg'); */
     
 }
-#navbarNav{
-    color: #4286f4;
-}
-/* h4{
-    color: #4286f4;
-}
-h3{
-    color: #091426;
-} */
+
 button{
     color: green;
     border-radius: 12px;
 }
 
-#footer{
-    
+
+
+.my_name{
+    margin-top:300px;
+}
+.my_image{
+    margin-left:250px;
+    border-radius:100px;
+    width: 200px;
+    margin-top: 100px;
+}
+.my_about{
+    margin-left: 100px;
+    margin-bottom: 100px;
+
+}
+.myy_name{
+    margin-left: 240px;
+    margin-top: 50px;
+}
+.first_thing{
+    background-color: #71383d;
+    color: white;
+}
+body{
+    font-family: 'Sawarabi Mincho', sans-serif;
+}
+.my_icon{
+    font-size:80px;
+    margin-left: 40px;
+}
+.my_icon_one{
+    font-size:80px;
+    margin-left: 250px;
+    margin-bottom: 50px;
+}
+
+.my_projects{
+    margin-left: 300px;
+}
+
+.contact{
+    margin-left: 300px;
 }

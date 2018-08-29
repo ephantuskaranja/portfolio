@@ -1,79 +1,93 @@
 {% extends 'base.html' %} {% load static %} {% load bootstrap4 %} {% block content %}
-<div class="text-centre" id="port">
-  <h1>Portfolio</h1>
-</div>
-<hr>
 
-<div class="row">
+
+<div class="row first_thing">
   {% for prof in profile %}
-  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+  <div class="col-md-2"></div>
+  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
     <!-- insertpicture -->
-    <img src="{% static 'css/images/mypic.JPG'%}" class="responsive-img" alt="Image" id="image">
+    <img src="{% static 'css/images/mypic.JPG'%}" class="responsive-img my_image" alt="Image" id="image">
+    <h3 class="text-centre myy_name">{{prof.first_name}} {{prof.last_name}}</h3>
+    <div class="text-center">
+      <!-- about section -->
+      {% for p in profile %}
+      <h6></h6>
+      {% endfor %}
 
-  </div>
-  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" id="about">
 
-    <h3>{{prof.first_name}} {{prof.last_name}}</h3>
-    <h5>{{prof.about}}</h5>
+    </div>
+    <h5 class="text-centre my_about">Full-stack web developer based in Nairobi, Kenya. Specialized in Python.</h5>
     {% endfor %}
   </div>
 </div>
+
+
+<div class="container" style="height: 50vh;">
+  <h2>Skills</h2>
+  <div class="row text-center">
+
+    <!-- skills,educ,jobexp,contacts -->
+
+
+    <div class="col-md-3">
+      <i class="devicon-django-plain colored my_icon"></i>
+    </div>
+    <div class="col-md-3">
+      <i class="devicon-git-plain colored my_icon"></i>
+    </div>
+    <div class="col-md-3">
+      <i class="devicon-html5-plain-wordmark colored my_icon"></i>
+    </div>
+    <div class="col-md-3">
+      <i class="devicon-jquery-plain-wordmark colored my_icon"></i>
+    </div>
+    <br>
+    <div class="col-md-3">
+      <i class="devicon-python-plain-wordmark colored my_icon"></i>
+    </div>
+    <div class="col-md-3">
+      <i class="devicon-postgresql-plain-wordmark colored my_icon"></i>
+    </div>
+    <div class="col-md-3">
+      <i class="devicon-angularjs-plain colored my_icon"></i>
+    </div>
+  </div>
+</div>
+
 <hr>
 
-<div class="row">
-  <!-- skills,educ,jobexp,contacts -->
-  <div class="w3-card" id="skills">
-    <h4>Skills</h4>
-    {% for skill in skills %}
-    <li>{{skill.skill}}</li>
-    {% endfor %}
-    <hr>
-  </div>
-</div>
-
-
-<div class="row">
-  <div class="w3-card">
-    <h4>Education</h4>
-    {% for edu in education %}
-    <li>{{edu.institution}}</li>
-    {% endfor %}
-    <hr>
-  </div>
-</div>
-
-<div class="row">
+<div class="container">
   <h3>Projects</h3>
-</div>
-<div class="row">
-  <h6>Below are some of the projects that I have done</h6>
-</div>
 <div class="row">
 
   {% for project in projects %}
 
-  <div class="w3-card" id="projects">
-    <br>
+  <div class="col-md-8">
     <h4>{{project.name}}</h4>
     <img src="{{project.image.url }}" class="thumbnail" alt="image" width="700px;">
-    <hr>
-    <p>{{project.description}}</p>
+
+    </div>
+    <div class="col-md-4"><h4>{{project.description}}</h4>
     <a href="{{project.github_link}}">
-      <button type="button">View-on_Github</button>
+      <button type="button" class="btn btn-outline-primary">View On Github</button>
     </a>
     {% if project.live_link %}
     <a href="{{project.live_link}}">
-      <button type="button">Live-link</button>
+      <button type="button" class="btn btn-outline-primary">Live Link</button>
+
     </a>
     {% endif %}
+  </div>
+  {% endfor %}
+
 
   </div>
+  
+  </div>
+  <hr>
 
-  {% endfor %}
-</div>
-<hr>
 <div class="row">
-  <div class="w3-card">
+  <div class="w3-card contact">
     <h4>Contacts</h4>
     {% for contact in contacts %}
     <li>
